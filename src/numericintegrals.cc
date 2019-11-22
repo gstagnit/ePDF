@@ -478,11 +478,11 @@ namespace ePDF
   }
 
   //_________________________________________________________________________________
-  NumericIntegrals::NumericIntegrals(int const& iflv, int const& nl, double const& epsabs, double const& epsrel):
+  NumericIntegrals::NumericIntegrals(int const& iflv, int const& nl):
     _iflv(iflv),
     _nl(nl),
-    _epsabs(epsabs),
-    _epsrel(epsabs),
+    _epsabs(0.001),
+    _epsrel(0.001),
     _w(gsl_integration_workspace_alloc(10000))
   {
   }
