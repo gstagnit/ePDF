@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
   ePDF::xDistributions xpdfs{config};
 
   // Tabulate PDFs
-  const std::vector<double> xlha{1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 3e-1, 5e-1, 7e-1, 9e-1};
+  const std::vector<double> xlha{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99, 0.999};
   std::cout << "\nNumerical solution:" << std::endl;
   std::cout << "   x    "
             << "   e- + e+  "
@@ -65,9 +65,9 @@ int main(int argc, char* argv[])
     {
       const std::vector<double> xf = xpdfs.Evolve(x, Q);
       std::cout << std::setprecision(1) << x << "  ";
-      std::cout << std::setprecision(4) << xf[0] << "  "
-                << std::setprecision(4) << xf[1] << "  "
-                << std::setprecision(4) << xf[2] << "  "
+      std::cout << std::setprecision(4) << xf[0] / x << "  "
+                << std::setprecision(4) << xf[1] / x  << "  "
+                << std::setprecision(4) << xf[2] / x  << "  "
                 << std::endl;
     }
   std::cout << "\n";
