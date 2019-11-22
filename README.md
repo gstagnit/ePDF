@@ -45,7 +45,7 @@ ccmake .
 ## Documetation
 
 Code documentation generated with Doxygen can be found here:
-https://vbertone.github.io/epdf/html/index.html.
+https://vbertone.github.io/ePDF/html/index.html.
 
 ## Relevant references
 
