@@ -177,7 +177,8 @@ namespace ePDF
     int _Columns;
     std::vector<T> _Matrix;
 
-    friend std::ostream& operator << (std::ostream& os, Matrix<T> const& sg);
+    template<class Y>
+    friend std::ostream& operator << (std::ostream& os, Matrix<Y> const& sg);
   };
 
   //_________________________________________________________________________________
