@@ -77,5 +77,4 @@ namespace ePDF
    * @return \f$\mathrm{Li}_{3}(x)\f$
    */
   inline double trilog(double const& x) { return polylog(3,x); }
-
 }

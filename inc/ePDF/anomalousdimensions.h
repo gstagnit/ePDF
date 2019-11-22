@@ -18,7 +18,6 @@ namespace ePDF
    * @param nf: the number of active flavours
    * @return The leading order splitting functions function in N
    */
-  //std::pair<std::array<std::complex<double>, 1>, std::array<std::array<std::complex<double>, 2>, 2>> andim_lo(std::complex<double> const& N, int const& nf);
   std::pair<std::complex<double>, Matrix<std::complex<double>>> andim_lo(std::complex<double> const& N, int const& nf);
 
   /**
@@ -28,6 +27,5 @@ namespace ePDF
    * @param nf: the number of active flavours
    * @return The next-to-leading order splitting functions function in N
    */
-  //std::pair<std::array<std::complex<double>, 1>, std::array<std::array<std::complex<double>, 2>, 2>> andim_nlo(std::complex<double> const& N, int const& nf);
   std::pair<std::complex<double>, Matrix<std::complex<double>>> andim_nlo(std::complex<double> const& N, int const& nf);
 }

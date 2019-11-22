@@ -15,13 +15,16 @@
 
 namespace ePDF
 {
+  /**
+   * @brief The "evol_params" structure contains the evolution
+   * parameters.
+   */
   struct evol_params
   {
     double                          x;
     double                          Q;
     int                             id;
     std::shared_ptr<NDistributions> Ndist;
-    //_________________________________________________________________________________
     evol_params operator = (evol_params const& p)
     {
       x     = p.x;

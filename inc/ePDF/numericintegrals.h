@@ -24,6 +24,8 @@ namespace ePDF
      * @brief The "NumericIntegrals" constructor.
      * @param flv: 0 = singlet, 1 = photon, 2 = nonsinglet
      * @param nl: number of leptons (needed for singlet)
+     * @param epsabs: absolute integration accuracy (default: 0.001)
+     * @param epsrel: relative integration accuracy (default: 0.001)
      */
     NumericIntegrals(int const& iflv, int const& nl, double const& epsabs = 0.001, double const& epsrel = 0.001);
 
@@ -39,8 +41,8 @@ namespace ePDF
     double integrate(double const& z) const;
 
   private:
-    int const _iflv;
-    int const _nl;
+    int    const _iflv;
+    int    const _nl;
     double const _epsabs;
     double const _epsrel;
     gsl_integration_workspace *_w;

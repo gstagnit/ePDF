@@ -88,8 +88,6 @@ namespace ePDF
     Matrix<std::complex<double>> Minv(Matrix<std::complex<double>> const& M) const;
 
   private:
-    std::map<std::string, int> const _ptmap = {{"LL", 0}, {"NLL", 1}};
-
     AlphaQED    const _aQED;
     int         const _ipt;
     int         const _nl;

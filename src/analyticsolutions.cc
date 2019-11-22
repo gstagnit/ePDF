@@ -3,7 +3,6 @@
 //
 
 #include "ePDF/analyticsolutions.h"
-#include "ePDF/constants.h"
 #include "ePDF/specialfunctions.h"
 #include "ePDF/numericintegrals.h"
 

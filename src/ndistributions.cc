@@ -12,7 +12,7 @@ namespace ePDF
   //_________________________________________________________________________________
   NDistributions::NDistributions(YAML::Node const& config):
     _aQED(AlphaQED{config}),
-    _ipt(_ptmap.at(config["Perturbative order"].as<std::string>())),
+    _ipt(ptmap.at(config["Perturbative order"].as<std::string>())),
     _nl(config["NL"].as<int>()),
     _Qi(config["Initial scale"].as<double>()),
     _ai(_aQED.Evolve(_Qi)),

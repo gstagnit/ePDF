@@ -37,3 +37,6 @@ CMakeFiles/
 Makefile
 bin/ePDF-config
 cmake_install.cmake
+install_manifest.txt
+run/Evolution
+doc/html

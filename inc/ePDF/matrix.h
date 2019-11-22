@@ -11,6 +11,10 @@
 
 namespace ePDF
 {
+  /**
+   * @name Class to manage matrix objects
+   */
+  ///@{
   template <class T>
   class Matrix
   {
@@ -255,4 +259,5 @@ namespace ePDF
   {
     return rhs /= lhs;
   }
+  ///@}
 }

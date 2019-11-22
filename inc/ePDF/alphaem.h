@@ -80,23 +80,31 @@ namespace ePDF
     double FBetaQED(double const& alpha) const;
 
   private:
-    std::string const m_method;
-    std::string const m_po;
-    double      const m_aref;
-    double      const m_Qref;
-    int         const m_NL;
-    int         const m_NF;
+    std::string const m_method;       //!< Evolution method
+    std::string const m_po;           //!< Perturbative order
+    double      const m_aref;         //!< Reference value of alpha
+    double      const m_Qref;         //!< Reference scale
+    int         const m_NL;           //!< Number of active charged leptons
+    int         const m_NF;           //!< Number of active quarks
 
-    // Parameter of numerical integration
+    /**
+     * @name Parameter of numerical integration
+     */
+    ///@{
     int    const m_nstep = 10;
     double const m_sxth  = 0.166666666666666;
+    ///@}
 
-    // Sum of the electric charges squared
+    /**
+     * @brief Sum of the electric charges squared
+     */
     std::vector<double> m_sumch2 = { 0.0, 1.0/9.0, 5.0/9.0, 2.0/3.0,
                                      10.0/9.0, 11.0/9.0, 5.0/3.0
                                    };
 
-    // Sum of the electric charges to the fourth
+    /**
+     * @brief Sum of the electric charges to the fourth
+     */
     std::vector<double> m_sumch4 = { 0.0, 1.0/81.0, 17.0/81.0, 18.0/81.0,
                                      34.0/81.0, 35.0/81.0, 51.0/81.0
                                    };
