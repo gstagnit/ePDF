@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 
   // Allocate AnalyticSolutions object
   std::cout << "Analytic solution:" << std::endl;
-  ePDF::AnalyticSolutions xpdfsan{config};
+  ePDF::AnalyticSolutions pdfsan{config};
   std::cout << "   x    "
             << "   e- + e+  "
             << "   photon   "
@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
             << std::endl;
   for (auto const& x : xlha)
     {
-      const std::vector<double> xf = xpdfsan.Evolve(x, Q);
+      const std::vector<double> xf = pdfsan.Evolve(x, Q);
       std::cout << std::setprecision(1) << x << "  ";
       std::cout << std::setprecision(4) << xf[0] << "  "
                 << std::setprecision(4) << xf[1] << "  "
