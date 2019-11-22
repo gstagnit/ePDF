@@ -23,6 +23,13 @@ For the last development branch you can clone the master code:
 git clone https://github.com/gstagnit/ePDF.git
 ```
 
+## Dependencies
+
+In order to install the code, you need to have installed:
+
+- [``yaml-cpp``](https://github.com/jbeder/yaml-cpp),
+- [``GSL``](https://www.gnu.org/software/gsl/doc/html/).
+
 ## Installation 
 
 The code can be compiled using the following procedure:
