@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
   // Tabulate PDFs
   const std::vector<double> xlha{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99, 0.999};
   std::cout << "\nNumerical solution:" << std::endl;
-  std::cout << "   x    "
+  std::cout << "    x    "
             << "   e- + e+  "
             << "   photon   "
             << "   e- - e+  "
@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
   for (auto const& x : xlha)
     {
       const std::vector<double> xf = xpdfs.Evolve(x, Q);
-      std::cout << std::setprecision(1) << x << "  ";
+      std::cout << std::setprecision(2) << x << "  ";
       std::cout << std::setprecision(4) << xf[0] / x << "  "
                 << std::setprecision(4) << xf[1] / x  << "  "
                 << std::setprecision(4) << xf[2] / x  << "  "
@@ -75,7 +75,7 @@ int main(int argc, char* argv[])
   // Allocate AnalyticSolutions object
   std::cout << "Analytic solution:" << std::endl;
   ePDF::AnalyticSolutions pdfsan{config};
-  std::cout << "   x    "
+  std::cout << "    x    "
             << "   e- + e+  "
             << "   photon   "
             << "   e- - e+  "
@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
   for (auto const& x : xlha)
     {
       const std::vector<double> xf = pdfsan.Evolve(x, Q);
-      std::cout << std::setprecision(1) << x << "  ";
+      std::cout << std::setprecision(2) << x << "  ";
       std::cout << std::setprecision(4) << xf[0] << "  "
                 << std::setprecision(4) << xf[1] << "  "
                 << std::setprecision(4) << xf[2] << "  "
