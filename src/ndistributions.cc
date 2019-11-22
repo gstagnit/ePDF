@@ -20,7 +20,7 @@ namespace ePDF
     _bt1(_aQED.Beta1QED()),
     _method(config["PDF"]["evolution"].as<std::string>()),
     _expand(config["PDF"]["expand"] ? config["PDF"]["expand"].as<bool>() : true),
-    _scheme(config["Factorisation scheme"].as<std::string>())
+    _scheme(config["Factorisation scheme"] ? config["Factorisation scheme"].as<std::string>() : "MSbar")
   {
   }
 
