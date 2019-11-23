@@ -24,9 +24,9 @@ namespace ePDF
     _L0(log( _Qi * _Qi / ( me * me ) )),
     _orderR(orderR),
     _orderA(orderA),
-    _x0photon(1),
-    _x1photon(7),
-    _pphoton(4),
+    _x0photon(2),
+    _x1photon(6),
+    _pphoton(2),
     _numint(true),
     _rechatON(true)
   {
