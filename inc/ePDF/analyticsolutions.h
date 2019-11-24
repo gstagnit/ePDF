@@ -35,7 +35,7 @@ namespace ePDF
      * @param config: the YAML:Node with the parameters
      * @param orderA: 0 == LL, 1 = NLL
      * @param orderR: turn on or off contributions aL,(aL)^2,(aL)^3, a, a^2L, a^3L^2
-     * @note It overwrites the perturbative order found in config file
+     * @note This choice does not affect the routine for alpha, which will still read the p.o. from config file
      */
     AnalyticSolutions(YAML::Node const& config, int const& orderA, std::vector<bool> const orderR);
 
