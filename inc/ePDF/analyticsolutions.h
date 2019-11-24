@@ -178,16 +178,36 @@ namespace ePDF
     std::vector<double> RecHatS(double const& z) const;
     std::vector<double> RecHatG(double const& z) const;
 
+    /**
+     * @brief This contains LL and NLL
+     */
     double AsyEleAF(double const& z) const;
+
+    /**
+     * @brief This contains LL and NLL
+     */
     double AsyEleAR(double const& z) const;
+
+    /**
+     * @brief This contains LL and NLL
+     */
     std::vector<double> AsyEleBarAF(double const& z) const;
+
+    /**
+     * @brief This contains LL and NLL
+     */
     std::vector<double> AsyEleBarAR(double const& z) const;
 
     /**
      * @brief This contains AR and AF
      */
-    double AsyPhoton(double const& z) const;
+    double AsyPhotonNLL(double const& z) const;
 
+    /**
+     * @brief This contains AR and AF
+     */
+    double AsyPhotonLL(double const& z) const;
+    
     /**
      * @brief Auxiliary function used in AsyPhoton
      */
@@ -196,7 +216,7 @@ namespace ePDF
                    double const& z, double const& k, double const& M1, double const& M2) const;
 
     /**
-     * @brief This contains AR and AF
+     * @brief This contains AR and AF, LL and NLL
      */
     std::vector<double> AsyPhotonBar(double const& z) const;
 

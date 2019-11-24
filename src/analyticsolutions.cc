@@ -96,7 +96,7 @@ namespace ePDF
       }
     else
       {
-        return AsyPhoton(x);
+        return AsyPhotonNLL(x);
       }
   }
 
@@ -177,7 +177,7 @@ namespace ePDF
       case 0:
         return ( _aQED.IsFixed() ) ? AsyEleAF(x) : AsyEleAR(x);
       case 1:
-        return AsyPhoton(x);
+        return ( _orderA == 0 ) ? AsyPhotonLL(x) : AsyPhotonNLL(x);
       case 2:
         return ( _aQED.IsFixed() ) ? AsyEleAF(x) : AsyEleAR(x);
       default:
@@ -685,7 +685,7 @@ namespace ePDF
   }
 
   //_________________________________________________________________________________
-  double AnalyticSolutions::AsyPhoton(double const& z) const
+  double AnalyticSolutions::AsyPhotonNLL(double const& z) const
   {
     double b1overb0(0.0), b0(0.0), t(0.0), chi10(0.0);
 
@@ -807,6 +807,34 @@ namespace ePDF
     return (a0/a) * ( gamma5 + _a0twopi * coeff1 + _a0twopi*_a0twopi * coeff2 );
   }
 
+  //_________________________________________________________________________________
+  double AnalyticSolutions::AsyPhotonLL(double const& z) const
+  {
+    double t = ( _aQED.IsFixed() ) ? _eta0/2.0 : _t;
+
+    const double csi0 = 2.0*t;
+    const double csihat0 = 3.0/2.0*t;
+
+    const double M1 = 2.0;
+    const double M2 = - 2.0/3.0 * _nl - 3.0/2.0;
+
+    const double log1mz = log(1-z);
+    const double den = M2 - M1*log1mz;
+    const double den2 = den*den;
+    const double den3 = den*den2;
+
+    const double k = csi0;
+    const double k2 = k*k;
+    
+    const double MF1k = exp(-emc*k)*pow(1-z,k)/tgamma(1+k) *
+      ( 1.0 / den - (Pi2*k - 6*zeta3*k2)*M1/6.0 / den2
+	- (30.0*Pi2 - 360*zeta3*k + Pi2*Pi2*k2)*M1*M1/180.0 / den3 );
+    const double MF10 = 1.0 / den - (30.0*Pi2)*M1*M1/180.0 / den3;
+
+    return - exp(csihat0) * MF1k + exp(-2.0/3.0*_nl*t) * MF10;
+
+  }
+  
   //_________________________________________________________________________________
   std::vector<double> AnalyticSolutions::AsyPhotonBar(double const& z) const
   {
