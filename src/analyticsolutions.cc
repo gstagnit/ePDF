@@ -5,6 +5,7 @@
 #include "ePDF/analyticsolutions.h"
 #include "ePDF/specialfunctions.h"
 #include "ePDF/numericintegrals.h"
+#include "ePDF/banner.h"
 
 #include <math.h>
 #include <iostream>
@@ -30,6 +31,7 @@ namespace ePDF
     _numint(true),
     _rechatON(true)
   {
+    Banner();
   }
 
   //_________________________________________________________________________________
@@ -825,16 +827,16 @@ namespace ePDF
 
     const double k = csi0;
     const double k2 = k*k;
-    
+
     const double MF1k = exp(-emc*k)*pow(1-z,k)/tgamma(1+k) *
-      ( 1.0 / den - (Pi2*k - 6*zeta3*k2)*M1/6.0 / den2
-	- (30.0*Pi2 - 360*zeta3*k + Pi2*Pi2*k2)*M1*M1/180.0 / den3 );
+                        ( 1.0 / den - (Pi2*k - 6*zeta3*k2)*M1/6.0 / den2
+                          - (30.0*Pi2 - 360*zeta3*k + Pi2*Pi2*k2)*M1*M1/180.0 / den3 );
     const double MF10 = 1.0 / den - (30.0*Pi2)*M1*M1/180.0 / den3;
 
     return - exp(csihat0) * MF1k + exp(-2.0/3.0*_nl*t) * MF10;
 
   }
-  
+
   //_________________________________________________________________________________
   std::vector<double> AnalyticSolutions::AsyPhotonBar(double const& z) const
   {

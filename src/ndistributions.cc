@@ -6,6 +6,7 @@
 #include "ePDF/anomalousdimensions.h"
 #include "ePDF/specialfunctions.h"
 #include "ePDF/constants.h"
+#include "ePDF/banner.h"
 
 namespace ePDF
 {
@@ -22,6 +23,7 @@ namespace ePDF
     _expand(config["PDF"]["expand"] ? config["PDF"]["expand"].as<bool>() : true),
     _scheme(config["Factorisation scheme"] ? config["Factorisation scheme"].as<std::string>() : "MSbar")
   {
+    Banner();
   }
 
   //_________________________________________________________________________

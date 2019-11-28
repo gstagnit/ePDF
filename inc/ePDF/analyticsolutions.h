@@ -207,7 +207,7 @@ namespace ePDF
      * @brief This contains AR and AF
      */
     double AsyPhotonLL(double const& z) const;
-    
+
     /**
      * @brief Auxiliary function used in AsyPhoton
      */

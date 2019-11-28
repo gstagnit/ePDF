@@ -73,8 +73,8 @@ int main(int argc, char* argv[])
   std::cout << "\n";
 
   // Allocate AnalyticSolutions object
-  std::cout << "Analytic solution:" << std::endl;
   ePDF::AnalyticSolutions pdfsan{config};
+  std::cout << "Analytic solution:" << std::endl;
   std::cout << "    x    "
             << "   e- + e+  "
             << "   photon   "

@@ -6,6 +6,7 @@ set(kernel_source
   alphaem.cc
   analyticsolutions.cc
   numericintegrals.cc
+   banner.cc
   )
 
 add_library(kernel OBJECT ${kernel_source})
