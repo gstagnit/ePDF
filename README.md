@@ -116,6 +116,7 @@ https://vbertone.github.io/ePDF/html/index.html.
 ## Relevant references
 
 - S. Frixione, *Initial conditions for electron and photon structure and fragmentation functions*, [arXiv:1909.03886](https://arxiv.org/pdf/1909.03886.pdf).
+- V. Bertone, M. Cacciari, S. Frixione, G. Stagnitto, *The partonic structure of the electron at the next-to-leading logarithmic accuracy in QED*, [arXiv:1911.12040](https://arxiv.org/pdf/1911.12040.pdf)
 
 ## Contacts
 
